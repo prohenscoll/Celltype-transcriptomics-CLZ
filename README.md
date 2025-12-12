@@ -54,14 +54,14 @@ To reproduce the full analysis:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/laurajuliamelis/EOR-prediction-FEP.git
+   git clone https://github.com/prohenscoll/Celltype-transcriptomics-CLZ.git
    ```
 
 2. Open R or RStudio and set the working directory to the repo folder.
 
 3. Run the scripts in the order specified above.
 
-*Note: Raw data are not included in this repository due to privacy restrictions.*
+*Note: Raw data are in Gene Omnibus under the code GSEXXXX.*
 
 ---
 

@@ -22,6 +22,7 @@ The analysis is structured across 4 scripts executed in sequential order:
 
 | Script | Description |
 |--------|-------------|
+| `0_setup/` | Installing comand-line tools, check versions, create environments|
 | `1_rna_preprocessing/` | Preprocessing of raw FASTQ files, including quality control, adapter trimming, alignment to the mouse reference genome (GRCm39), and gene-level quantification to obtain raw counts |
 | `2_deconvolution_preparation.R` | Normalization of count data and preparation of single-cell reference matrices for signature matrix generation in CIBERSORTx |
 | `3_deconvolution.R` | Cell type deconvolution using non-negative least squares (NNLS) and CIBERSORTx outputs, including integration of fraction estimates and generation of plots |

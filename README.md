@@ -1,4 +1,4 @@
-# Celltype-transcriptomics-CLZ for neurobiology of TRS
+# Celltype-transcriptomics-CLZ
 
 **Cell type specific transcriptional responses to clozapine in microglia, astrocytes, and neurons to investigate treatment-resistant schizophrenia**
 
@@ -10,26 +10,22 @@ This repository contains the full analysis pipeline used to characterize gene ex
 
 The goal of this project is to investigate the biological mechanisms underlying treatment-resistant schizophrenia (TRS), and to do that we characterized cell type specific transcriptional responses to clozapine (CLZ) in microglia, astrocytes, and neurons from treated-mice frontal cortices. The study uses bulk RNA-seq data from immunopanned cell populations and applies differential gene expression and gene set enrichment analyses to identify molecular programs associated with CLZ response. Immunopanned cell populations are validated with single-cell RNA-seq reference datasets and applying cell-type deconvolution.
 
-- **Model system**: Mouse frontal cortex
-- **Cell types**: Microglia, astrocytes, and neurons
-- **Treatment**: Clozapine (CLZ) versus vehicle (and risperidone, where indicated)
-- **Data**: Bulk RNA-seq integrated with single-cell RNA-seq reference datasets
-- **Analyses**: Cell type deconvolution, differential gene expression, and gene set enrichment analysis
-
+- **Cell types**: microglia, astrocytes or neurons.
+- **Treatment**: vehicle (VEH), clozapine (CLZ) or risperidone (RIS).
+- **Analyses**: Cell-type deconvolution, Differential Gene Expression (DEG) analysis, Gense Set Enrichment Analysis (GSEA).
+  
 ---
 
 ## 🧪 Analysis Pipeline
 
-The analysis is structured across 6 scripts, executed in sequential order:
+The analysis is structured across 4 scripts executed in sequential order:
 
 | Script | Description |
 |--------|-------------|
-| `1_data_preprocessing_and_descriptives.R` | Initial data cleaning, exclusion criteria, and exploratory analyses |
-| `2_data_imputation.R` | Multiple imputation of missing values using MICE |
-| `3_variable_selection_LASSO.R` | Feature selection via logistic LASSO with 10-fold cross-validation |
-| `4_model_fitting.R` | Logistic regression and ML models fitted on imputed data (clinical, genetic, combined) |
-| `5_model_evaluation.R` | Model calibration, discrimination (AUC), bootstrap-based comparisons and variable contribution|
-| `6_decision_curve_analysis.R` | Evaluation of clinical utility using decision curve analysis (DCA) |
+| `1_rna_preprocessing.sh` | Preprocessing of raw FASTQ files, including quality control, adapter trimming, alignment to the mouse reference genome (GRCm39), and gene-level quantification to obtain raw counts |
+| `2_deconvolution_preparation.R` | Normalization of count data and preparation of single-cell reference matrices for signature matrix generation in CIBERSORTx |
+| `3_deconvolution.R` | Cell type deconvolution using non-negative least squares (NNLS) and CIBERSORTx outputs, including integration of fraction estimates and generation of plots |
+| `4_DataAnalysis.R` | DEG analysis and GSEA|
 
 ---
 

@@ -29,21 +29,48 @@ The analysis is structured across 4 scripts executed in sequential order:
 
 ---
 
-## 📦 Required Packages
+## 🛠 Setup (required tools and packages)
 
-Key R packages used include:
+### Command-line tools: 
 
-- `openxlsx`, `mice`, `VIM`, `naniar`
-- `glmnet`, `dplyr`
-- `rms`, `caret`, `pROC`, `boot`, `gbm`
-- `ggplot2`, `ggsignif`, `fastshap`, `shapviz`
-- `dcurves`, `gtsummary` 
+- Homebrew (macOS)
+- FastQC
+- cutadapt
+- HISAT2
+- samtools
+- subread (featureCounts)
 
+A one-time setup script is provided in `setup/`.
+
+### R packages:
+
+- **Core RNA-seq analysis**:  
+  `DESeq2`, `sva`, `BiocGenerics`
+
+- **Deconvolution**:  
+  `nnls`
+
+- **Single-cell reference data and handling**:  
+  `scRNAseq`, `SingleCellExperiment`, `rhdf5`, `biomaRt`
+
+- **Functional enrichment and GO analysis**:  
+  `clusterProfiler`, `org.Mm.eg.db`, `AnnotationDbi`, `GO.db`
+- **Data manipulation**:  
+  `dplyr`, `tidyr`, `readr`, `tibble`, `stringr`, `purrr`, `reshape2`, `tidyverse`
+
+- **Visualization**:  
+  `ggplot2`, `pheatmap`, `RColorBrewer`, `ggrepel`, `VennDiagram`, `ggvenn`, `grid`
+
+- **Input / Output utilities**:  
+  `openxlsx`
+  
 You can install missing packages using:
 
 ```r
-packages <- c("openxlsx", "mice", "VIM", "naniar", "glmnet", "dplyr", "rms", "caret", "pROC", "boot", "gbm", "ggplot2", "ggsignif", "fastshap", "shapviz", "dcurves", "gtsummary")
-install.packages(setdiff(packages, rownames(installed.packages())))
+if (!requireNamespace("BiocManager", quietly = TRUE))
+  install.packages("BiocManager")
+BiocManager::install(c("DESeq2","sva","BiocGenerics","clusterProfiler","org.Mm.eg.db", "AnnotationDbi", "GO.db", "scRNAseq", "SingleCellExperiment", "rhdf5", "biomaRt"))
+install.packages(c("nnls", "dplyr", "tidyr", "readr", "tibble", "stringr", "purrr", "reshape2", "tidyverse", "ggplot2", "pheatmap", "RColorBrewer", "ggrepel", "VennDiagram", "ggvenn", "grid", "openxlsx"))
 ```
 
 ---

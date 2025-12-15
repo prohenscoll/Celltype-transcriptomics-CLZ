@@ -8,7 +8,7 @@ This repository contains the full analysis pipeline used to characterize gene ex
 
 ## 📚 Project Overview
 
-The goal of this project is to investigate the biological mechanisms underlying treatment-resistant schizophrenia (TRS), and to do that we characterized cell type specific transcriptional responses to clozapine (CLZ) in microglia, astrocytes, and neurons from treated-mice frontal cortices. The study uses bulk RNA-seq data from immunopanned cell populations and applies differential gene expression and gene set enrichment analyses to identify molecular programs associated with CLZ response. Immunopanned cell populations are validated with single-cell RNA-seq reference datasets and applying cell-type deconvolution.
+The goal of this project is to investigate the biological mechanisms underlying treatment-resistant schizophrenia (TRS), and to do that we characterized cell type specific transcriptional responses to clozapine (CLZ) in microglia, astrocytes, and neurons from treated-mice frontal cortices. The study uses bulk RNA-seq data from immunopanned cell populations and applies differential gene expression (DEG) analysis and gene set enrichment analysis (GSEA) to identify molecular programs associated with CLZ response. Immunopanned cell populations are validated with single-cell RNA-seq reference datasets and applying cell-type deconvolution.
 
 - **Cell types**: microglia, astrocytes or neurons.
 - **Treatment**: vehicle (VEH), clozapine (CLZ) or risperidone (RIS).
@@ -22,11 +22,11 @@ The analysis is structured across sequential scripts executed in the following o
 
 | Script | Description |
 |--------|-------------|
-| `0_setup/` | Installing comand-line tools, check versions, create environments|
+| `0_setup/` | Installation of required command-line tools, version checks, and environment setup|
 | `1_rna_preprocessing/` | Preprocessing of raw FASTQ files, including: quality control, adapter trimming, alignment to the mouse reference genome (GRCm39), gene-level quantification to obtain raw counts |
-| `2_deconvolution_preparation.R` | Normalization of count data and preparation of single-cell reference matrices for signature matrix generation in CIBERSORTx |
-| `3_deconvolution.R` | Cell type deconvolution using non-negative least squares (NNLS) and CIBERSORTx outputs, including integration of fraction estimates and generation of plots |
-| `4_DataAnalysis.R` | DEG analysis and GSEA|
+| `2_bulk_matrix_preparation/` | Generation of a clean bulk gene expression matrix from raw count data, used as input for downstream deconvolution and differential expression analyses |
+| `3_deconvolution/` | Preparation of single-cell reference matrices and cell-type deconvolution using non-negative least squares (NNLS) and CIBERSORTx, including integration of cell-fraction estimates and visualization |
+| `4_dataAnalysis/` | DEG analysis and GSEA|
 
 ---
 

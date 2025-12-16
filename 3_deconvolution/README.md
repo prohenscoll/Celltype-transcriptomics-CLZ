@@ -44,7 +44,6 @@ Each script generates a cell-type–specific reference expression matrix used fo
 - Deconvolution was performed externally via the CIBERSORTx interface.
 - Resulting signature matrices and proportion estimates are stored in:
   - `cibersortx/signature_matrices/`
-  - `cibersortx/proportions/`
 
 ### NNLS
 

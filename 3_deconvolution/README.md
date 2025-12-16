@@ -20,7 +20,7 @@ Deconvolution was carried out in three main steps:
 
 ## 1. Single-cell reference construction
 
-Location: `sc_references/`
+Location: `01_sc_references/`
 
 Single-cell RNA-seq datasets used:
 - Zeisel et al., 2015
@@ -43,11 +43,11 @@ Each script generates a cell-type–specific reference expression matrix used fo
 - Signature matrices were generated using the **CIBERSORTx web platform**.
 - Deconvolution was performed externally via the CIBERSORTx interface.
 - Resulting signature matrices and proportion estimates are stored in:
-  - `cibersortx/signature_matrices/`
+  - `02_cibersortx/signature_matrices/`
 
 ### NNLS
 
-Location: `nnls/`
+Location: `03_nnls/`
 
 Script:
 - `04_NNLS_deconvolution.Rmd`
@@ -58,7 +58,7 @@ NNLS deconvolution was performed locally in R using the same signature matrices 
 
 ## 3. Proportion analysis
 
-Location: `proportions_analysis/`
+Location: `04_proportions_analysis/`
 
 Scripts:
 - `05_CIBERSORTx_proportionsanalysis.Rmd`

@@ -1,6 +1,6 @@
 # 📁 3_deconvolution
 
-This folder contains all analyses related to **cell-type deconvolution** performed to validate the enrichment of immunopanned bulk RNA-seq samples.
+This folder contains all analyses related to **cell type deconvolution** performed to validate the enrichment of immunopanned bulk RNA-seq samples.
 
 Deconvolution was performed using:
 - Three independent single-cell RNA-seq reference datasets

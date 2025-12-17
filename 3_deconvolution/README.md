@@ -14,7 +14,7 @@ Deconvolution was carried out in three main steps:
 
 1. **Construction of single-cell reference matrices**
 2. **Cell-type deconvolution**
-3. **Analysis of estimated cell-type proportions**
+3. **Plotting of estimated cell type proportions**
 
 ---
 
@@ -32,7 +32,7 @@ Scripts:
 - `02_scReferenceFromTasic2018.Rmd`
 - `03_scReferenceFromYao2021.Rmd`
 
-Each script generates a cell-type–specific reference expression matrix used for downstream deconvolution.
+Each script generates a cell type-specific reference expression matrix used for downstream deconvolution.
 
 ---
 
@@ -41,9 +41,9 @@ Each script generates a cell-type–specific reference expression matrix used fo
 ### CIBERSORTx
 
 - Signature matrices were generated using the **CIBERSORTx web platform**.
-- Deconvolution was performed externally via the CIBERSORTx interface.
-- Resulting signature matrices and are stored in:
+- Resulting signature matrices are stored in:
   - `02_cibersortx/signature_matrices/`
+- Deconvolution was performed externally via the CIBERSORTx interface.
 
 ### NNLS
 

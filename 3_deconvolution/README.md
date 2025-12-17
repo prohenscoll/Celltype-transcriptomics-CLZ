@@ -13,7 +13,7 @@ Deconvolution was performed using:
 Deconvolution was carried out in three main steps:
 
 1. **Construction of single-cell reference matrices**
-2. **Cell-type deconvolution**
+2. **Cell type deconvolution**
 3. **Plotting of estimated cell type proportions**
 
 ---

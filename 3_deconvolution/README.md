@@ -32,7 +32,7 @@ Scripts:
 - `02_scReferenceFromTasic2018.Rmd`
 - `03_scReferenceFromYao2021.Rmd`
 
-Each script generates a cell type-specific reference expression matrix used for downstream deconvolution.
+Each script generates a cell type-specific reference expression matrix used for generating signature matrices.
 
 ---
 

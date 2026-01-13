@@ -9,9 +9,9 @@ This repository contains the full analysis pipeline used to characterize gene ex
 ## 📚 Project Overview
 
 The goal of this project is to investigate the biological mechanisms underlying treatment-resistant schizophrenia (TRS). To achieve this, we characterized cell-type specific transcriptional responses to clozapine (CLZ) in microglia, astrocytes, and neurons from treated mice. The study uses bulk RNA-seq data from immunopanned cell populations and applies:
-· **Differential gene expression (DEG) analysis**: to identify genes uniquely regulated by treatment
-· **Gene Set Enrichment Analysis (GSEA)**: to identify molecular programs associated with CLZ response. 
-· **Validation**: Immunopanned populations are validated with single-cell RNA-seq reference datasets and cell-type deconvolution.
+- **Differential gene expression (DEG) analysis**: to identify genes uniquely regulated by treatment.
+- **Gene Set Enrichment Analysis (GSEA)**: to identify molecular programs associated with CLZ response.
+- **Validation**: Immunopanned populations are validated with single-cell RNA-seq reference datasets and cell-type deconvolution.
 
 **Study Design**:
 - **Cell types**: Microglia (CD45+), Astrocytes (HEPA+) and Neurons (THY1+).

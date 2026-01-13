@@ -89,7 +89,7 @@ To reproduce the full analysis:
 
 3. Run the scripts in the order specified above.
 
-*Note: Raw data are in Gene Omnibus under the code GSEXXXX.*
+*Note: Raw data are in Gene Omnibus under the code GSE315204.*
 
 ---
 

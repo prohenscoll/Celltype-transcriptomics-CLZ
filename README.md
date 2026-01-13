@@ -20,7 +20,7 @@ The goal of this project is to investigate the biological mechanisms underlying 
 
 The analysis is structured across sequential scripts executed in the following order:
 
-| Script | Description |
+| Folder | Description |
 |--------|-------------|
 | `0_setup/` | Installation of required command-line tools, version checks, and environment setup|
 | `1_rna_preprocessing/` | Preprocessing of raw FASTQ files, including: quality control, adapter trimming, alignment to the mouse reference genome (GRCm39), gene-level quantification to obtain raw counts |
@@ -89,13 +89,13 @@ To reproduce the full analysis:
 
 3. Run the scripts in the order specified above.
 
-*Note: Raw data are in Gene Omnibus under the code GSE315204.*
-
+*Note: Raw data are available in the NCBI Geme Expression Omnibus under accession number GSE315204.*
+*Cibersortx Note: CIBERSORTx analyses were performed using the online platform (https://cibersortx.stanford.edu/) following the developers' guidelines.*
 ---
 
 ## 📄 License
 
-This code is released under the
+This code is released under the MIT License. See the LICENSE file for details
 
 ---
 

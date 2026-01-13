@@ -104,11 +104,14 @@ This code is released under the
 For questions, suggestions, or collaboration opportunities, please contact:
 
 **Sergi Mas Herrero**  
-Accredited Researcher · CIBERSAM
+Accredited Researcher · CIBERSAM · IDIBAPS
 Associate Professor · University of Barcelona  
 📧 sergimash@ub.edu
 
-and 
+**Natalia Rodriguez Ferret**  
+Accredited Researcher · CIBERSAM · IDIBAPS
+Associate Professor · University of Barcelona  
+📧 nrodriguezfe@ub.edu
 
 **Lucía Prohens Coll**  
 Collaborative Researcher ·
